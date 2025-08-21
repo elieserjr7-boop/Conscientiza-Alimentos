@@ -136,34 +136,30 @@ with tab_impacto:
             total_refeicoes = refeicoes_por_item[alimento_selecionado] * quantidade
             st.success(f"🎉 Sua doação pode gerar aproximadamente **{int(total_refeicoes)} refeições!**")
 
-  with col2:
+    with col2:
         st.header("Nossa Área de Atuação")
         st.success("Atendemos em **toda a cidade e zona urbana de Ipiranga do Piauí!**")
         st.write("O círculo no mapa representa nossa área de coleta.")
         
         # CÓDIGO DO MAPA ATUALIZADO
-        # Coordenadas do centro de Ipiranga - PI
         lat_ipiranga = -7.0125
         lon_ipiranga = -41.8844
 
-        # Configuração da visualização do mapa
         view_state = pdk.ViewState(
             latitude=lat_ipiranga,
             longitude=lon_ipiranga,
-            zoom=12, # Aumentei o zoom para focar mais na cidade
-            pitch=50, # Adiciona uma perspectiva 3D
+            zoom=12,
+            pitch=50,
         )
 
-        # Camada do mapa para criar o círculo
         layer = pdk.Layer(
             "ScatterplotLayer",
             data=pd.DataFrame({'lat': [lat_ipiranga], 'lon': [lon_ipiranga]}),
             get_position='[lon, lat]',
-            get_color='[200, 30, 0, 160]', # Cor (Vermelho, Verde, Azul, Transparência)
-            get_radius=1000, # Raio do círculo em metros (1 km)
+            get_color='[200, 30, 0, 160]',
+            get_radius=1000,
         )
 
-        # Renderiza o mapa no Streamlit
         st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
 
 # --- ABA 3: INFORMAÇÕES E DÚVIDAS ---
