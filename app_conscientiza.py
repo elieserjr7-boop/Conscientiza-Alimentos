@@ -158,7 +158,7 @@ with tab_impacto:
             data=pd.DataFrame({'lat': [lat_ipiranga], 'lon': [lon_ipiranga]}),
             get_position='[lon, lat]',
             get_color='[200, 30, 0, 160]',
-            get_radius=1000,
+            get_radius=4000,
         )
 
         st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
