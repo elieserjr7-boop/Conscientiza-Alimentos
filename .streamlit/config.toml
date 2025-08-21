@@ -1,14 +1,16 @@
 [theme]
-# Cor primária usada nos elementos interativos (botões, etc.)
-primaryColor="#8A2BE2" # Um tom de roxo (BlueViolet)
+# Cor primária que você já tinha (botões, campos, etc.)
+primaryColor="#8A2BE2"
 
-# Cor de fundo principal
-backgroundColor="#F0F2F6" # Um cinza bem claro, para não cansar a vista
+# --- MUDANÇA AQUI ---
+# Cor de fundo principal da página. Usei um lilás bem suave.
+backgroundColor="#F2EBFD"
 
-# Cor de fundo de elementos secundários (como a barra lateral)
-secondaryBackgroundColor="#E6E0F8" # Um roxo bem clarinho
+# Cor de fundo de elementos secundários (como a área do formulário).
+# Um tom um pouco diferente para dar um leve contraste.
+secondaryBackgroundColor="#E6E0F8"
 
-# Cor do texto
+# Cor do texto (mantemos escura para boa leitura)
 textColor="#31333F"
 
 # Fonte
