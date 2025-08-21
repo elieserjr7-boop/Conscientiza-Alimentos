@@ -107,7 +107,7 @@ with tab_doar:
                 st.write("#### Ajude-nos a ir mais longe!")
                 st.write("Compartilhe nosso projeto com seus amigos e familiares. Juntos, podemos combater ainda mais o desperdício.")
                 # Link de compartilhamento para WhatsApp
-                st.link_button("Compartilhar no WhatsApp", "https://wa.me/?text=Estou%20ajudando%20a%20combater%20o%20desperdício%20de%20alimentos%20com%20o%20projeto%20Alimento%20Salvo%20em%20Ipiranga/PI!%20Conheça%20você%20também:%20conscientizaalimentos.streamlit.app")
+                st.link_button("Compartilhar no WhatsApp", "https://wa.me/?text=Estou%20ajudando%20a%20combater%20o%20desperdício%20de%20alimentos%20com%20o%20projeto%20Alimento%20Salvo%20em%20Ipiranga/PI!%20Conheça%20você%20também:%20combateaodesperdicioipi.streamlit.app")
             else:
                 st.error("Desculpe, ocorreu um erro ao enviar sua notificação. Verifique se suas credenciais de e-mail estão configuradas corretamente ou tente novamente mais tarde.")
         else:
