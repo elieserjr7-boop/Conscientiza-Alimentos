@@ -56,7 +56,7 @@ def enviar_email(nome, endereco, telefone, alimentos):
 # --- HEADER ---
 # Substitua "seu_logo.png" pelo nome do seu arquivo de imagem
 try:
-    st.image("seu_logo.png", width=150)
+    st.image("logo.png", width=150)
 except:
     st.write(" ") # Espaço reservado caso não encontre o logo
 
