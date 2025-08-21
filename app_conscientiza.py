@@ -87,7 +87,7 @@ with tab_doar:
         
         col1, col2 = st.columns(2)
         with col1:
-            numero_casa = st.text_input("Número:")
+            numero_casa = st.text_input("Número do Endereço:")
         with col2:
             cidade = st.text_input("Cidade:", value="Ipiranga do Piauí", disabled=True)
 
