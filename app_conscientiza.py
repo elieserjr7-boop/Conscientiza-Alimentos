@@ -16,9 +16,9 @@ def enviar_email(nome, endereco, telefone, alimentos):
     # --- DADOS DO SEU E-MAIL (REMETENTE) ---
     # ATENÇÃO: Use um "app password" (senha de aplicativo) se você usa Gmail com verificação em duas etapas.
     # NUNCA coloque sua senha real diretamente no código em projetos públicos.
-    email_remetente = "seu-email@gmail.com"  # Coloque aqui o e-mail que vai ENVIAR a notificação
-    senha_remetente = "sua-senha-de-aplicativo"    # Coloque aqui a SENHA DE APLICATIVO gerada
-    email_destinatario = "email-do-grupo@gmail.com" # E-mail do seu grupo que vai RECEBER a notificação
+    email_remetente = st.secrets["GMAIL_USER"]
+    senha_remetente = st.secrets["GMAIL_PASSWORD"]
+    email_destinatario = st.secrets["EMAIL_DESTINATARIO"] # E-mail do seu grupo que vai RECEBER a notificação
 
     # --- MONTANDO O E-MAIL ---
     assunto = f"Nova Doação de Alimentos de: {nome}"
