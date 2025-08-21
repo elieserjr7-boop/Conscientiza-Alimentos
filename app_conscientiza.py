@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon=" cibo"
 )
 
-# --- FUNÇÃO PARA ENVIAR O E-MAIL (nenhuma mudança aqui) ---
+# --- FUNÇÃO PARA ENVIAR O E-MAIL ---
 def enviar_email(nome, endereco, telefone, alimentos):
     # Usando o sistema de segredos do Streamlit (st.secrets)
     email_remetente = st.secrets["GMAIL_USER"]
@@ -62,10 +62,9 @@ with st.form("formulario_doacao"):
     
     nome_pessoa = st.text_input("Seu Nome Completo:")
     
-    # --- MUDANÇA 1: SEPARANDO OS CAMPOS DE ENDEREÇO ---
-    # Apagamos a linha única de endereço e adicionamos estas.
-    
-    rua_bairro = st.text_input("Endereço (Rua e Bairro):")
+    # --- MUDANÇA 1: ADICIONANDO CAMPO "BAIRRO" ---
+    rua = st.text_input("Rua:")
+    bairro = st.text_input("Bairro:") # CAMPO ADICIONADO AQUI
     
     # Usando colunas para deixar a interface mais organizada
     col1, col2 = st.columns(2)
@@ -80,13 +79,11 @@ with st.form("formulario_doacao"):
     submitted = st.form_submit_button("Enviar Notificação")
 
 if submitted:
-    # --- MUDANÇA 2: JUNTANDO AS INFORMAÇÕES DE ENDEREÇO ---
-    # Criamos uma variável que junta os campos de endereço em um texto só.
-    
-    endereco_completo = f"{rua_bairro}, nº {numero_casa} - {cidade}"
+    # --- MUDANÇA 2: INCLUINDO O BAIRRO NO ENDEREÇO COMPLETO ---
+    endereco_completo = f"{rua}, nº {numero_casa}, Bairro {bairro} - {cidade}"
     
     # Verificamos se todos os campos foram preenchidos
-    if nome_pessoa and rua_bairro and numero_casa and cidade and numero_contato and descricao_alimentos:
+    if nome_pessoa and rua and bairro and numero_casa and cidade and numero_contato and descricao_alimentos:
         # Passamos a variável 'endereco_completo' para a função de e-mail
         if enviar_email(nome_pessoa, endereco_completo, numero_contato, descricao_alimentos):
             st.success("Notificação enviada com sucesso! Agradecemos muito a sua colaboração. Em breve entraremos em contato.")
