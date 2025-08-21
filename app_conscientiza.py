@@ -1,6 +1,7 @@
 import streamlit as st
 import smtplib
 import pandas as pd
+import pydeck as pdk  # <-- AQUI ESTÁ A CORREÇÃO
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
