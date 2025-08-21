@@ -143,13 +143,13 @@ with tab_impacto:
         st.write("O círculo no mapa representa nossa área de coleta.")
         
         # CÓDIGO DO MAPA ATUALIZADO
-        lat_ipiranga = -6.8277
-        lon_ipiranga = -41.8844
+        lat_ipiranga = -6.8225
+        lon_ipiranga = -41.7328
 
         view_state = pdk.ViewState(
             latitude=lat_ipiranga,
             longitude=lon_ipiranga,
-            zoom=12,
+            zoom=13,
             pitch=50,
         )
 
