@@ -139,7 +139,7 @@ with tab_impacto:
 
     with col2:
         st.header("Nossa Área de Atuação")
-        st.success("Atendemos em **toda a cidade e zona urbana de Ipiranga do Piauí!**")
+        st.success("Atendemos em **toda zona urbana de Ipiranga do Piauí!**")
         st.write("O círculo no mapa representa nossa área de coleta.")
         
         # CÓDIGO DO MAPA ATUALIZADO
